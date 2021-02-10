@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.VerItemAdminFragment">
+
+    <ImageView
+        android:id="@+id/ivVerItemAdminCaratula"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvVerAdminArtista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Black Sun Empire"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvVerAdminTitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivVerItemAdminCaratula" />
+
+    <TextView
+        android:id="@+id/tvVerAdminTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I Saw You"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnVerItemAdminEditar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvVerAdminArtista" />
+
+    <Button
+        android:id="@+id/btnVerItemAdminEditar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Editar"
+        app:layout_constraintBottom_toTopOf="@+id/btnReproducir"
+        app:layout_constraintEnd_toStartOf="@+id/btnVerItemAdminBorrar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvVerAdminTitulo" />
+
+    <Button
+        android:id="@+id/btnVerItemAdminBorrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Borrar"
+        app:layout_constraintBottom_toBottomOf="@+id/btnVerItemAdminEditar"
+        app:layout_constraintEnd_toStartOf="@+id/btnVerItemAdminCancelar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnVerItemAdminEditar" />
+
+    <Button
+        android:id="@+id/btnVerItemAdminCancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancelar"
+        app:layout_constraintBottom_toBottomOf="@+id/btnVerItemAdminBorrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnVerItemAdminBorrar" />
+
+    <Button
+        android:id="@+id/btnReproducir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="Reproducir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reproducciones:"
+        app:layout_constraintStart_toStartOf="@+id/ivVerItemAdminCaratula"
+        tools:layout_editor_absoluteY="37dp" />
+
+    <TextView
+        android:id="@+id/tvReproducciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="@+id/ivVerItemAdminCaratula"
+        app:layout_constraintStart_toEndOf="@+id/textView4" />
+</androidx.constraintlayout.widget.ConstraintLayout>

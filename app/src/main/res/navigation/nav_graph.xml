@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/fragmentAdmin"
+        android:name="com.ad.adeloquentretrofit.View.AdminFragment"
+        android:label="fragment_admin"
+        tools:layout="@layout/fragment_admin" >
+        <action
+            android:id="@+id/action_fragmentAdmin_to_fragmentVerMusica"
+            app:destination="@id/fragmentVerMusica" />
+        <action
+            android:id="@+id/action_fragmentAdmin_to_fragmentInsertar"
+            app:destination="@id/fragmentInsertar" />
+        <action
+            android:id="@+id/action_fragmentAdmin_to_firstFragment"
+            app:destination="@id/firstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentVerMusica"
+        android:name="com.ad.adeloquentretrofit.View.VerMusicaAdminFragment"
+        android:label="fragment_ver_musica"
+        tools:layout="@layout/fragment_ver_musica_admin" >
+        <action
+            android:id="@+id/action_fragmentVerMusica_to_verItemAdminFragment"
+            app:destination="@id/verItemAdminFragment" />
+        <action
+            android:id="@+id/action_fragmentVerMusica_to_fragmentAdmin"
+            app:destination="@id/fragmentAdmin" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.ad.adeloquentretrofit.View.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_fragmentAdmin"
+            app:destination="@id/fragmentAdmin" />
+        <action
+            android:id="@+id/action_firstFragment_to_clienteFragment"
+            app:destination="@id/clienteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentInsertar"
+        android:name="com.ad.adeloquentretrofit.View.InsertarFragment"
+        android:label="fragment_insertar"
+        tools:layout="@layout/fragment_insertar" >
+        <action
+            android:id="@+id/action_fragmentInsertar_to_fragmentAdmin"
+            app:destination="@id/fragmentAdmin" />
+    </fragment>
+    <fragment
+        android:id="@+id/verItemAdminFragment"
+        android:name="com.ad.adeloquentretrofit.View.VerItemAdminFragment"
+        android:label="fragment_ver_item_admin"
+        tools:layout="@layout/fragment_ver_item_admin" >
+        <action
+            android:id="@+id/action_verItemAdminFragment_to_fragmentVerMusica"
+            app:destination="@id/fragmentVerMusica" />
+        <action
+            android:id="@+id/action_verItemAdminFragment_to_editarMusicaFragment"
+            app:destination="@id/editarMusicaFragment" />
+        <action
+            android:id="@+id/action_verItemAdminFragment_self"
+            app:destination="@id/verItemAdminFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editarMusicaFragment"
+        android:name="com.ad.adeloquentretrofit.View.EditarMusicaFragment"
+        android:label="fragment_editar_musica"
+        tools:layout="@layout/fragment_editar_musica" >
+        <action
+            android:id="@+id/action_editarMusicaFragment_to_verItemAdminFragment"
+            app:destination="@id/verItemAdminFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/clienteFragment"
+        android:name="com.ad.adeloquentretrofit.View.ClienteFragment"
+        android:label="fragment_cliente"
+        tools:layout="@layout/fragment_cliente" >
+        <action
+            android:id="@+id/action_clienteFragment_to_verMusicaClienteFragment"
+            app:destination="@id/verMusicaClienteFragment" />
+        <action
+            android:id="@+id/action_clienteFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verMusicaClienteFragment"
+        android:name="com.ad.adeloquentretrofit.View.VerItemClienteFragment"
+        android:label="fragment_ver_musica_cliente"
+        tools:layout="@layout/fragment_ver_item_cliente" >
+        <action
+            android:id="@+id/action_verMusicaClienteFragment_to_clienteFragment"
+            app:destination="@id/clienteFragment" />
+    </fragment>
+</navigation>

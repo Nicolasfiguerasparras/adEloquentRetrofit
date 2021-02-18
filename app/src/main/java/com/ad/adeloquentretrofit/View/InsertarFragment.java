@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -72,6 +73,7 @@ public class InsertarFragment extends Fragment {
                 viewModel.storeMusicaRetrofit(musica).observe(getActivity(), new Observer<Musica>() {
                     @Override
                     public void onChanged(Musica musica) {
+                        Log.v("xyz", "nextId: " + musica.getId());
                         Reproducciones reproducciones = new Reproducciones();
                         reproducciones.setIdMusica(musica.getId());
                         reproducciones.setReproducciones(0);

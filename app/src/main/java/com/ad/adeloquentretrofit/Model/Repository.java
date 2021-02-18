@@ -45,7 +45,7 @@ public class Repository {
         allReproducciones = reproduccionesDao.getAllReproducciones();
 
         // Retrofit
-        String url = "https://www.tulagames.com/EloquentRetrofit/public/api/";
+        String url = "https://www.nicolasfiguerasparras.com/Retrofit/public/api/";
         retrofit = new Retrofit.Builder().baseUrl(url).addConverterFactory(GsonConverterFactory.create()).build();
         this.context = context;
     }
